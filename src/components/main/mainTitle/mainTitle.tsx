@@ -1,11 +1,12 @@
 import style from './mainTitle.module.scss'
 import { Link } from 'react-router-dom'
+import Video from '/3D.mp4'
 
 export default function MainTitle() {
   return (
     <section className={style['main-title']}>
       <video autoPlay muted loop>
-        <source src="/public/3D.mp4" type="video/mp4" />
+        <source src={Video} type="video/mp4" />
       </video>
       <div className={style['main-title__text']}>
         <h1 className={style['main-title__title']}>3D визуализация <br />
