@@ -1,0 +1,45 @@
+.contacts-wrapper{
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 900px;
+  margin: 0 auto;
+
+  h2 {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-size: 53px;
+    font-weight: 200;
+    text-align: center;
+  }
+}
+
+.wrapper{
+display: flex;
+
+.contacts-form-wrapper{
+  width: 450px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3{
+    font-weight: 200;
+    font-size: 21px;
+  }
+
+  .contacts-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+.contacts-tel{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+}

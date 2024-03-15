@@ -1,0 +1,42 @@
+
+.team-wrapper{
+padding-left: 40px;
+padding-right: 40px;
+  
+h2{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 53px;
+    font-weight: 200;
+    text-align: center;
+  }
+
+  .team{
+    display: flex;
+    img{
+      width: 300px;
+      height: 500px;
+    }
+  
+    .team-list{
+      padding-left: 30px;
+      padding-right: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      p{
+        font-size: 18px;
+      }
+
+      h5{
+        padding-bottom: 15px;
+        font-size: 21px;
+        font-weight: 300;
+      }
+    }
+
+  }
+  
+}
