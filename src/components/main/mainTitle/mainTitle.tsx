@@ -5,7 +5,7 @@ export default function MainTitle() {
   return (
     <section className={style['main-title']}>
       <video autoPlay muted loop>
-        <source src="/dist/3D.mp4" type="video/mp4" />
+        <source src="/3D.mp4" type="video/mp4" />
       </video>
       <div className={style['main-title__text']}>
         <h1 className={style['main-title__title']}>3D визуализация <br />
