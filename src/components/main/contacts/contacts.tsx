@@ -9,33 +9,34 @@ export default function Contacts() {
       <div className={style['wrapper']}>
 
         <div className={style['contacts-form-wrapper']}>
-          <h3>отправить емэйл</h3>
+          {/* <h3>отправить емэйл</h3> */}
           <form className={style['contacts-form']}>
-            <label>
-            имя
-              <input type='' />
+            <label className={style['custom-field']}>
+            <p>имя</p>
+              <input type='text' className={style['contacts-input']} required/>
             </label>
             <label>
-            имейл
-              <input type='' />
+            <p>мейл</p>
+              <input type='email' className={style['contacts-input']} required/>
             </label>
             <label>
-            комментарий
-              <textarea rows={4} cols={5} />
+            <p>комментарий</p>
+              <textarea rows={4} cols={5} className={style['contacts-textarea']}/>
             </label>
+            <button type='submit' className={style['submit-btn']}>отправить</button>
           </form>
         </div>
 
         <div className={style['contacts-tel']}>
-          <ul>
+          <ul className={style['contacts-tel-list']}>
             <li>
-              <Link to=''>+7123456789</Link>
+              <Link className={style['contacts-tel-link']} to=''>+7123456789</Link>
             </li>
             <li>
-              <Link to=''>123@123.com</Link>
+              <Link className={style['contacts-tel-link']} to=''>123@123.com</Link>
             </li>
             <li>
-              <Link to=''>SPB Komenda</Link>
+              <Link className={style['contacts-tel-link']} to=''>SPB Komenda</Link>
             </li>
           </ul>
         </div>

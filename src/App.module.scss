@@ -1,7 +1,8 @@
-*{
+*, *::before, *::after {
   font-family: sans-serif;
   box-sizing: border-box;
 }
+
 
 html{
   margin: 0;
