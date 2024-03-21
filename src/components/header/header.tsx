@@ -13,28 +13,33 @@ export default function Header() {
         <ul className={style['nav-list']}>
           <li className={style['nav-item']}>
             <Link to='' className={style['nav-link']}>
-             о нас 
+            возможности
             </Link>
           </li>
           <li className={style['nav-item']}>
             <Link to='' className={style['nav-link']}>
-             цены 
+            технологии
             </Link>
           </li>
           <li className={style['nav-item']}>
             <Link to='' className={style['nav-link']}>
-             калькулятор 
+            цены
             </Link>
           </li>
           <li className={style['nav-item']}>
             <Link to='' className={style['nav-link']}>
-             контакты
+            преимущества
+            </Link>
+          </li>
+          <li className={style['nav-item']}>
+            <Link to='' className={style['nav-link']}>
+            контакты
             </Link>
           </li>
         </ul>
         <ul className={style['nav-sub']}>
           <li className={style['nav-sub-item']}>
-            <button>eng</button>
+            <button>ру</button>
           </li>
         </ul>
       </nav>

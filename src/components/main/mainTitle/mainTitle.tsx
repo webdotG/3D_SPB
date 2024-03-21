@@ -12,11 +12,11 @@ export default function MainTitle() {
         <h1 className={style['main-title__title']}>3D визуализация <br />
           на новом уровне
         </h1>
-        <p className={style['main-title__paragraph']}>технологии для вашего успеха</p>
+        <p className={style['main-title__paragraph']}>готовое маркетинговое решение<br />
+          для вашего бизнеса</p>
       </div>
       <div className={style['main-title__link-wrapper']}>
-        <Link className={style['main-title__link']} to="#">свзяаться</Link>
-        <Link className={style['main-title__link']} to="#">демо</Link>
+        <Link className={style['main-title__link']} to="#">смотреть демо</Link>
       </div>
     </section>
   )
