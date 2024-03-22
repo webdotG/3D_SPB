@@ -1,7 +1,6 @@
 import style from './skills.module.scss'
 import { motion } from "framer-motion";
 
-
 const skills = [
   '3D тур по МОП',
   'Обзор объектов инфраструктуры',
@@ -19,16 +18,17 @@ interface SkillItemProps {
   index: number;
 }
 
-const SkillItem: React.FC<SkillItemProps>  = ({ text, index } ) => (
+const SkillItem: React.FC<SkillItemProps> = ({ text, index }) => (
   <motion.li
-      className={style['content__item']}
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
-      transition={{ duration: 0.75, delay: index * 0.66}} 
-    >
-     <p> {text}
-     </p>
-         </motion.li>
+    className={style['content__item']}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.75, delay: index * 0.66 }}
+  >
+    <p>
+      {text}
+    </p>
+  </motion.li>
 );
 
 export default function Skills() {
@@ -42,7 +42,7 @@ export default function Skills() {
 
           <ul className={style['content__list']}>
             {skills.map((skill, index) => (
-              <SkillItem key={index} text={skill} index={index}/>
+              <SkillItem key={index} text={skill} index={index} />
             ))}
           </ul>
           <div className={style['content--img-wrapper']}></div>

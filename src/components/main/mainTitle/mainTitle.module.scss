@@ -42,15 +42,22 @@
     .main-title__link {
       display: block;
       margin-right: 100px;
-      padding: 15px 25px;
+      padding: 12px 15px;
+      width: 300px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       border-radius: 8px;
-      font-size: 30px;
+      font-size: 31px;
       font-weight: 200;
-      border: 2px solid var(--color-white);
+      border: 3px solid var(--color-white);
       color: var(--color-white);
+
+      svg{
+        g{
+          fill: white;
+        }
+      }
 
       &:hover{
         background-color: rgba(white, 0.5) ;
