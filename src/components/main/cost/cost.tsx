@@ -54,18 +54,18 @@ export default function Cost() {
         <li className={style['cost-item']}>
           
           <div className={style['card-container']}> 
-          <Card />
+          <Card cardType='first' />
           </div>
 
         </li>
         <li className={style['cost-item']}>
         <div className={style['card-container']}> 
-        <Card />
+        <Card cardType='second'/>
           </div>
         </li>
         <li className={style['cost-item']}>
         <div className={style['card-container']}> 
-        <Card />
+        <Card cardType='third'/>
           </div>
         </li>
       </ul>

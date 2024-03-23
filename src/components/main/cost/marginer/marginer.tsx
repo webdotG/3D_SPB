@@ -7,7 +7,7 @@ export default function Marginer({ direction = "horizontal", margin }:
   let marginValue = margin;
 
   if (typeof margin !== "number" && typeof margin !== "string") {
-    // Если margin не является числом или строкой, устанавливаем его в значение по умолчанию
+    // Если margin не является числом или строкой, устанавливаю его в значение по умолчанию
     marginValue = "0";
   }
 
