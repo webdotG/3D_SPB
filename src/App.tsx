@@ -13,6 +13,7 @@ import Team from './components/main/team/team';
 import Cost from './components/main/cost/cost';
 import Compare from './components/main/compare/compare';
 import Contacts from './components/main/contacts/contacts';
+import Sponsors from './components/main/sponsors/sponsors';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Technology />
         <AdvantagesClient />
         <AdvantagesBuisnes />
+        <Sponsors />
         <Stages/>
         <Team />
         <Cost />

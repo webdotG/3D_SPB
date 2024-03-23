@@ -1,3 +1,4 @@
+import React from 'react';
 import style from './skills.module.scss'
 import { motion } from "framer-motion";
 import Video from '/3D.mp4'
@@ -19,21 +20,24 @@ interface SkillItemProps {
   index: number;
 }
 
-const SkillItem: React.FC<SkillItemProps> = ({ text, index }) => (
+const SkillItem: React.FC<SkillItemProps> = ({ text, index }) => {
 
+  const delay = index * 0.1;
 
+  return (
+    <motion.li
+      className={style['content__item']}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.33, delay }}
+    >
+      <p>
+        {text}
+      </p>
+    </motion.li>
+  )
+};
 
-  <motion.li
-    className={style['content__item']}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.33, delay: index * 0.12}}
-  >
-    <p>
-      {text}
-    </p>
-  </motion.li>
-);
 
 export default function Skills() {
 
@@ -44,11 +48,11 @@ export default function Skills() {
 
         <div className={`${style['first-content']} ${style['parallax']}`}>
 
-          <ul className={style['content__list']}>
+          <motion.ul className={style['content__list']}>
             {skills.map((skill, index) => (
               <SkillItem key={index} text={skill} index={index} />
             ))}
-          </ul>
+          </motion.ul>
           <div className={style['content--img-wrapper']}>
             <video autoPlay muted loop>
               <source src={Video} type="video/mp4" />
