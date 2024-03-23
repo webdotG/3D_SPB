@@ -1,6 +1,7 @@
 import style from './cost.module.scss'
 import splitString from '../../../utils/stringSplit';
 import { motion } from 'framer-motion';
+import Card from './card';
 
 
 
@@ -51,13 +52,21 @@ export default function Cost() {
 
       <ul className={style['cost-list']}>
         <li className={style['cost-item']}>
+          
+          <div className={style['card-container']}> 
+          <Card />
+          </div>
 
         </li>
         <li className={style['cost-item']}>
-
+        <div className={style['card-container']}> 
+        <Card />
+          </div>
         </li>
         <li className={style['cost-item']}>
-
+        <div className={style['card-container']}> 
+        <Card />
+          </div>
         </li>
       </ul>
 
