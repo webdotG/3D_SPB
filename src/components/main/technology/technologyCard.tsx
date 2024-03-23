@@ -1,8 +1,30 @@
 import styles from './technologyCard.module.scss';
-import { useTransform, motion, useScroll } from 'framer-motion';
+import { useTransform, motion, useScroll, motionValue } from 'framer-motion';
 import { useRef } from 'react';
 
-const TechnologyCard = ({i, title, description, src, color, progress, range, targetScale, link}) => {
+interface TechnologyCardProps {
+  i: number;
+  title: string;
+  description: string;
+  src: string;
+  color: string;
+  progress: number | undefined;
+  range: [number, number];
+  targetScale: number;
+  link: string;
+}
+
+
+const TechnologyCard: React.FC<TechnologyCardProps>= ({
+  i, 
+  title, 
+  description, 
+  src, 
+  color, 
+  progress, 
+  range, 
+  targetScale, 
+  link}) => {
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -11,8 +33,9 @@ const TechnologyCard = ({i, title, description, src, color, progress, range, tar
   })
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [2.5, 1])
-  const scale = useTransform(progress, range, [1, targetScale]);
- 
+  const motionProgress = motionValue(progress ?? 0)
+  const scale = useTransform(motionProgress, range, [1, targetScale]);
+
   return (
     <div ref={container} className={styles.cardContainer}>
       <motion.div 

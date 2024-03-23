@@ -10,7 +10,7 @@ const projects = [
     src: "unrealEngine.png",
     link: "https://www.unrealengine.com/en-US",
     color: "black"
-    
+
   },
   {
     title: "Autodesk",
@@ -26,26 +26,33 @@ const projects = [
     link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
     color: "black"
   },
-  
+
 ]
 
 
 export default function Technology() {
 
   const ref = useRef<HTMLDivElement | null>(null);
+  
   const { scrollYProgress } = useScroll({
     target: ref.current ? ref : undefined,
     offset: ['start start', 'end end']
   })
 
-
   return (
     <section className={style['technology-wrapper']}>
       <h2>Технологии</h2>
       {
-        projects.map( (project, i) => {
-          const targetScale = 1 - ( (projects.length - i) * 0.05);
-          return <TechnologyCard key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale}/>
+        projects.map((project, i) => {
+          const targetScale = 1 - ((projects.length - i) * 0.05);
+          return <TechnologyCard
+            key={`p_${i}`}
+            i={i} 
+            {...project}
+            progress={scrollYProgress.get()}
+            range={[i * .25, 1]}
+            targetScale={targetScale}
+          />
         })
       }
     </section>
