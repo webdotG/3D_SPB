@@ -1,37 +1,13 @@
 .technology-wrapper {
   padding-top: 30px;
   padding-bottom: 30px;
-
   h2 {
+    margin-bottom: 40px;
     font-size: 75px;
     text-align: center;
     font-weight: 200;
   }
 
-  .technolgy {
-    padding-top: 30px;
-    width: 900px;
-    margin: 0 auto;
-    display: flex;
-
-    .technolgy-img {
-      width: 350px;
-      height: 500px;
-    }
-
-    .technology-list{
-      padding-left: 40px;
-      padding-right: 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-
-      p{
-        font-size: 21px;
-      }
-    }
-
-  }
-
-
 }
+  
+  

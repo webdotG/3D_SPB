@@ -1,5 +1,5 @@
 import style from './stages.module.scss'
-import House from '../../../../public/house.jpg'
+// import House from '../../../../public/house.jpg'
 
 export default function Stages() {
   return (
@@ -38,7 +38,7 @@ export default function Stages() {
           <p>Оплата 30% от общей суммы</p>
           <p>Оплата 40% от общей суммы</p>
         </div>
-        <img src={House} className={style['technolgy-img']} />
+        <img src='#' className={style['technolgy-img']} />
       </div>
     </section>
   )

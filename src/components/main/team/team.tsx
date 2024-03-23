@@ -1,12 +1,12 @@
 import style from './team.module.scss'
-import House from '../../../../public/house.jpg'
+// import House from '../../../../public/house.jpg'
 
 export default function Team() {
   return (
     <section className={style['team-wrapper']}>
       <h2>Команда</h2>
       <div className={style['team']}>
-        <img src={House} className={style['technolgy-img']} />
+        <img src='#' className={style['technolgy-img']} />
         <ul className={style['team-list']}>
           <li>
             <p>

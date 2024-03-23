@@ -1,5 +1,6 @@
 import style from './skills.module.scss'
 import { motion } from "framer-motion";
+import Video from '/3D.mp4'
 
 const skills = [
   '3D тур по МОП',
@@ -19,6 +20,9 @@ interface SkillItemProps {
 }
 
 const SkillItem: React.FC<SkillItemProps> = ({ text, index }) => (
+
+
+
   <motion.li
     className={style['content__item']}
     initial={{ opacity: 0 }}
@@ -45,17 +49,11 @@ export default function Skills() {
               <SkillItem key={index} text={skill} index={index} />
             ))}
           </ul>
-          <div className={style['content--img-wrapper']}></div>
-        </div>
-
-        <div className={style['seconde-conent']}>
-          {/*  */}
-          <div className={style['content--img-wrapper']}></div>
-        </div>
-
-        <div className={style['therd-conent']}>
-          {/*  */}
-          <div className={style['content--img-wrapper']}></div>
+          <div className={style['content--img-wrapper']}>
+            <video autoPlay muted loop>
+              <source src={Video} type="video/mp4" />
+            </video>
+          </div>
         </div>
 
       </div>
