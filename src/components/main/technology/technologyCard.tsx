@@ -39,7 +39,7 @@ const TechnologyCard: React.FC<TechnologyCardProps>= ({
   return (
     <div ref={container} className={styles.cardContainer}>
       <motion.div 
-        style={{backgroundColor: color,  scale, top:`calc(-5vh + ${i * 15}px)`}} 
+        style={{backgroundColor: color,  scale, top:`calc(7vh + ${i * 15}px)`}} 
         className={styles.card}
       >
         <h2>{title}</h2>

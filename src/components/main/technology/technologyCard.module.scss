@@ -1,5 +1,5 @@
 .cardContainer {
-  height: calc(100vh + 90px);
+  height: 100vh;
   padding-bottom: 25px;
   display: flex;
   align-items: center;
@@ -13,77 +13,78 @@
   }
 
   .card {
-    height: 500px;
-    width: 1000px;
-    border: 3px solid black;
+    height: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 3px solid white;
     display: flex;
     flex-direction: column;
     position: relative;
-    top: -25%;
     border-radius: 25px;
-    padding: 50px;
     transform-origin: top;
+    overflow: hidden;
 
     h2 {
-      padding-left: 50px;
-      padding-top: 25px;
+      padding-left: 30px;
       text-align: left;
       margin: 0px;
       font-size: 58px;
     }
 
     .body {
-      display: flex;
+      width: 100%;
       height: 100%;
-      gap: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      gap: 150px;
 
       .description {
-        width: 40%;
+        width: 400px;
+        padding-top: 30px;
+        padding-left: 30px;
         position: relative;
-        top: 10%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        align-items: center;
-
+        align-items: start;
        
         p {
-          font-size: 16px;
-
-          &::first-letter {
-            font-size: 28px;
-            font-family: 'Title';
-          }
+          padding-top: 20px;
+          line-height: 25px;
+          font-size: 18px;
         }
 
         span {
+          width: 175px;
+          height: 50px;
+          margin-top: 25px;
           display: flex;
           align-items: center;
-          gap: 5px;
+          justify-content: center;
+          border: 2px solid white;
+          border-radius: 8px;
 
           a {
-            font-size: 12px;
-            text-decoration: underline;
+            font-size: 18px;
             cursor: pointer;
+            color: white;
           }
         }
       }
 
       .imageContainer {
         position: relative;
-        width: 60%;
+        width: 400px;
         height: 100%;
         border-radius: 25px;
         overflow: hidden;
 
-        .inner {
-          width: 100%;
-          height: 100%;
-        }
-
         img {
-          width: 500px;
+          display: block;
+          width: 300px;
           height: 300px;
+          margin: 0 auto;
           object-fit: contain;
         }
       }

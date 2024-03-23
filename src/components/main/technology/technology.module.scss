@@ -1,11 +1,14 @@
 .technology-wrapper {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+  background: rgba(40, 40, 43, 0.95);
   h2 {
-    margin-bottom: 40px;
+    text-align: center;
+    span{
     font-size: 75px;
     text-align: center;
     font-weight: 200;
+    color: white;
+  }
   }
 
 }
