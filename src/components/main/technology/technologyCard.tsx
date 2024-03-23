@@ -45,7 +45,7 @@ const TechnologyCard: React.FC<TechnologyCardProps>= ({
         <h2>{title}</h2>
         <div className={styles.body}>
           <div className={styles.description}>
-            <p>{description}</p>
+            <p>{description} </p>
             <span>
               <a href={link} target="_blank">See more</a>
               <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
