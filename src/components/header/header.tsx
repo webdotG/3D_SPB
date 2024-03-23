@@ -38,9 +38,9 @@ export default function Header() {
           </li>
         </ul>
         <ul className={style['nav-sub']}>
-          <li className={style['nav-sub-item']}>
+          {/* <li className={style['nav-sub-item']}>
             <button>ру</button>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

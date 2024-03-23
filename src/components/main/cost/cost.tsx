@@ -1,12 +1,40 @@
 import style from './cost.module.scss'
+import splitString from '../../../utils/stringSplit';
+import { motion } from 'framer-motion';
+
+
+
+const title = 'Стоимость'
 
 export default function Cost() {
+
+  const titleChars = splitString(title);
+
+  const charVariants = {
+    hidden: { opacity: 0 },
+    reveal: { opacity: 1 },
+  }
+
+
   return (
     <section className={style['cost-wrapper']}>
-      <h2>Стоимость</h2>
+            <motion.h2
+        initial='hidden'
+        whileInView='reveal'
+        transition={{staggerChildren: 0.1}}
+      >{titleChars.map( char => (
+        <motion.span
+          key={char}
+          transition={{duration: 0.5}}
+          variants={charVariants}
+        >
+          {char}
+          </motion.span>
+      ))}</motion.h2>
+      
       <p>
-        Благодаря тому, что наша команда работает вместе более 5 лет, у нас получилось оптимизировать все рабочие процессы.
-        Это позволяет нашим клиентам заказывать проекты дешевле, чем у крупных компаний.
+        Более 5 лет мы совершенствовали и оптимизировали рабочие процессы.<br/>
+        По этому сегодня мы выполняем проекты быстрее и дешевле, чем крупные компании.
       </p>
 
       <ul className={style['cost-list-btn']}>
