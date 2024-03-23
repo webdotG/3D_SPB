@@ -3,7 +3,7 @@ import TechnologyCard from './technologyCard';
 import { useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import splitString from '../../../utils/stringSplit';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
