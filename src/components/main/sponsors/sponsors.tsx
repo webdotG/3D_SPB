@@ -1,7 +1,6 @@
 import style from './sponsors.module.scss'
 import splitString from '../../../utils/stringSplit';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 import logoOne from '../../../SVG/sponsors/logo-facebook-svgrepo-com.svg';
 import logoTwo from '../../../SVG/sponsors/logo-reddit-svgrepo-com.svg';
