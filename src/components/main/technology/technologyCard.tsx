@@ -60,7 +60,7 @@ const TechnologyCard: React.FC<TechnologyCardProps>= ({
               style={{scale: imageScale, opacity: scrollYProgress}}
             >
               <img
-                src={`/3D_SPB/public/${src}`}
+                src={`/3D_SPB/${src}`}
                 alt="image" 
               />
             </motion.div>

@@ -27,7 +27,7 @@ const SkillItem: React.FC<SkillItemProps> = ({ text, index }) => (
     className={style['content__item']}
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
-    transition={{ duration: 0.75, delay: index * 0.66 }}
+    transition={{ duration: 0.33, delay: index * 0.12}}
   >
     <p>
       {text}
