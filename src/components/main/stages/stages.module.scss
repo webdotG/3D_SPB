@@ -46,12 +46,12 @@
     }
 
     .stages-visual {
-      width: 400px;
+      width: 150px;
       text-align: right;
       background-repeat: no-repeat;
       background-position-x: 100px;
-
       p {
+        position: absolute;
         padding-right: 35px;
         font-size: 14px;
         color: #666;

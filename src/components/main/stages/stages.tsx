@@ -44,7 +44,9 @@ export default function Stages() {
           </li>
         </ul>
         <div className={style['stages-visual']}>
-
+        <p>Оплата 30% от общей суммы </p>
+          <p>Оплата 30% от общей суммы</p>
+          <p>Оплата 40% от общей суммы</p>
           <div className={style['stages-visual-svg']}>
 
             <motion.svg
@@ -124,11 +126,8 @@ export default function Stages() {
 
           </div>
 
-          <p>Оплата 30% от общей суммы </p>
-          <p>Оплата 30% от общей суммы</p>
-          <p>Оплата 40% от общей суммы</p>
+         
         </div>
-        <img src='#' className={style['technolgy-img']} />
       </div>
     </section>
   )

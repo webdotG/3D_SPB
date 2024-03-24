@@ -29,8 +29,8 @@ function App() {
         <AdvantagesBuisnes />
         <Sponsors />
         <Stages/>
-        <Team />
         <Cost />
+        <Team />
         <Compare />
         <Contacts/>
       </main>
