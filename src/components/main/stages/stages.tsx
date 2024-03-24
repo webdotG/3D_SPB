@@ -16,6 +16,7 @@ export default function Stages() {
     <section className={style['stages']}>
       <h2>Этапы взаимодействия</h2>
       <div className={style['stages-content']}>
+
         <ul className={style['stages-list']}>
           <li className={style['stages-item']}>
             <p>
@@ -43,10 +44,38 @@ export default function Stages() {
             </p>
           </li>
         </ul>
-        <div className={style['stages-visual']}>
-        <p>Оплата 30% от общей суммы </p>
-          <p>Оплата 30% от общей суммы</p>
-          <p>Оплата 40% от общей суммы</p>
+
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className={style['stages-visual']}>
+
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 12, delay: 1.2, repeat: Infinity, }}
+            variants={variants}
+            className={style['conditionFirst']}>
+            30% от общей суммы
+          </motion.p>
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 12, delay: 3, repeat: Infinity, }}
+            variants={variants}
+            className={style['conditionSecond']}>
+            30% от общей суммы
+          </motion.p>
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 12, delay: 4.2, repeat: Infinity, }}
+            variants={variants}
+            className={style['conditionThirth']}>
+            40% от общей суммы
+          </motion.p>
+
           <div className={style['stages-visual-svg']}>
 
             <motion.svg
@@ -56,7 +85,7 @@ export default function Stages() {
               <motion.circle cx="16" cy="16" r="16"
                 initial="hidden"
                 animate="visible"
-                transition={{ duration: 3, delay: 0.2, repeat: Infinity  }}
+                transition={{ duration: 12, delay: 0.2, repeat: Infinity, }}
                 variants={variants}
               />
             </motion.svg>
@@ -64,70 +93,179 @@ export default function Stages() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className={style['Dotted']} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 270" xmlSpace="preserve"
-              >
+            >
               <g id="XMLID_508_">
                 <motion.circle cx="120" cy="25" r="16"
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 3, delay: 0.4, repeat: Infinity }}
-                variants={variants} 
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 0.4, repeat: Infinity }}
+                  variants={variants}
                 />
                 <motion.circle cx="120" cy="102" r="16"
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 3, delay: 0.6, repeat: Infinity }}
-                variants={variants}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 0.6, repeat: Infinity }}
+                  variants={variants}
                 />
-                <motion.circle cx="120" cy="176" r="16" 
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 3, delay: 0.8, repeat: Infinity }}
-                variants={variants}
+                <motion.circle cx="120" cy="176" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 0.8, repeat: Infinity }}
+                  variants={variants}
                 />
-                <motion.circle cx="120" cy="250" r="16" 
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 3, delay: 1, repeat: Infinity }}
-                variants={variants}
+                <motion.circle cx="120" cy="250" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 1, repeat: Infinity }}
+                  variants={variants}
                 />
               </g>
             </motion.svg>
-            <svg className={style['Circle']} width="30px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="16" r="16" />
-            </svg>
-            <svg className={style['Dotted']} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 270" xmlSpace="preserve">
-              
-            </svg>
-            <svg className={style['Circle']} width="45px" height="45px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="16" r="16" />
-            </svg>
-            <svg className={style['Dotted']} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 270" xmlSpace="preserve">
+            <motion.svg
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={style['Circle']} width="30px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <motion.circle cx="16" cy="16" r="16"
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 12, delay: 1.2, repeat: Infinity }}
+                variants={variants}
+              />
+            </motion.svg>
+            <motion.svg
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={style['Dotted']} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 270" xmlSpace="preserve"
+            >
               <g id="XMLID_508_">
-                <circle cx="120" cy="25" r="16" />
-                <circle cx="120" cy="102" r="16" />
-                <circle cx="120" cy="176" r="16" />
-                <circle cx="120" cy="250" r="16" />
+                <motion.circle cx="120" cy="25" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 1.4, repeat: Infinity }}
+                  variants={variants}
+                />
+                <motion.circle cx="120" cy="102" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 1.6, repeat: Infinity }}
+                  variants={variants}
+                />
+                <motion.circle cx="120" cy="176" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 1.8, repeat: Infinity }}
+                  variants={variants}
+                />
+                <motion.circle cx="120" cy="250" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 2, repeat: Infinity }}
+                  variants={variants}
+                />
               </g>
-            </svg>
-            <svg className={style['Circle']} width="30px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="16" r="16" />
-            </svg>
-            <svg className={style['Dotted']} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 270" xmlSpace="preserve">
+            </motion.svg>
+            <motion.svg
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={style['Circle']} width="45px" height="45px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <motion.circle cx="16" cy="16" r="16"
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 12, delay: 2.2, repeat: Infinity }}
+                variants={variants}
+              />
+            </motion.svg>
+            <motion.svg
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={style['Dotted']} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 270" xmlSpace="preserve"
+            >
               <g id="XMLID_508_">
-                <circle cx="120" cy="25" r="16" />
-                <circle cx="120" cy="102" r="16" />
-                <circle cx="120" cy="176" r="16" />
-                <circle cx="120" cy="250" r="16" />
+                <motion.circle cx="120" cy="25" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 2.4, repeat: Infinity }}
+                  variants={variants}
+                />
+                <motion.circle cx="120" cy="102" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 2.6, repeat: Infinity }}
+                  variants={variants}
+                />
+                <motion.circle cx="120" cy="176" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 2.8, repeat: Infinity }}
+                  variants={variants}
+                />
+                <motion.circle cx="120" cy="250" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 3, repeat: Infinity }}
+                  variants={variants}
+                />
               </g>
-            </svg>
-            <svg className={style['Circle']} width="40px" height="40px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="16" r="16" />
-            </svg>
+            </motion.svg>
+            <motion.svg
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={style['Circle']} width="30px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <motion.circle cx="16" cy="16" r="16"
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 12, delay: 3.2, repeat: Infinity }}
+                variants={variants}
+              />
+            </motion.svg>
+            <motion.svg
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={style['Dotted']} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 270" xmlSpace="preserve"
+            >
+              <g id="XMLID_508_">
+                <motion.circle cx="120" cy="25" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 3.4, repeat: Infinity }}
+                  variants={variants}
+                />
+                <motion.circle cx="120" cy="102" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, delay: 3.6, repeat: Infinity }}
+                  variants={variants}
+                />
+                <motion.circle cx="120" cy="176" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, ease: 'easeInOut', delay: 3.8, repeat: Infinity }}
+                  variants={variants}
+                />
+                <motion.circle cx="120" cy="250" r="16"
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ duration: 12, ease: 'easeInOut', delay: 4, repeat: Infinity }}
+                  variants={variants}
+                />
+              </g>
+            </motion.svg>
+            <motion.svg
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={style['Circle']} width="45px" height="45px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <motion.circle cx="16" cy="16" r="16"
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 12, ease: 'easeInOut', delay: 4.2, repeat: Infinity }}
+                variants={variants}
+              />
+            </motion.svg>
 
           </div>
 
-         
-        </div>
+
+        </motion.div>
       </div>
     </section>
   )
