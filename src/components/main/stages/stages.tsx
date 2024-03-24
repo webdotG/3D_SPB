@@ -1,7 +1,17 @@
 import style from './stages.module.scss'
 // import House from '../../../../public/house.jpg'
 
+import { motion } from 'framer-motion';
+
 export default function Stages() {
+
+
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+
   return (
     <section className={style['stages']}>
       <h2>Этапы взаимодействия</h2>
@@ -37,59 +47,78 @@ export default function Stages() {
 
           <div className={style['stages-visual-svg']}>
 
-            <svg fill="#000000" width="45px" height="45px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <motion.svg
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={style['Circle']} width="45px" height="45px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <motion.circle cx="16" cy="16" r="16"
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 3, delay: 0.2, repeat: Infinity  }}
+                variants={variants}
+              />
+            </motion.svg>
+            <motion.svg
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={style['Dotted']} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 270" xmlSpace="preserve"
+              >
+              <g id="XMLID_508_">
+                <motion.circle cx="120" cy="25" r="16"
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 3, delay: 0.4, repeat: Infinity }}
+                variants={variants} 
+                />
+                <motion.circle cx="120" cy="102" r="16"
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 3, delay: 0.6, repeat: Infinity }}
+                variants={variants}
+                />
+                <motion.circle cx="120" cy="176" r="16" 
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 3, delay: 0.8, repeat: Infinity }}
+                variants={variants}
+                />
+                <motion.circle cx="120" cy="250" r="16" 
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 3, delay: 1, repeat: Infinity }}
+                variants={variants}
+                />
+              </g>
+            </motion.svg>
+            <svg className={style['Circle']} width="30px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
               <circle cx="16" cy="16" r="16" />
             </svg>
-            <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 270 270" xmlSpace="preserve">
-              <g id="XMLID_508_">
-                <rect id="XMLID_509_" x="120" width="10" height="10" />
-                <rect id="XMLID_510_" x="120" y="60" width="10" height="10" />
-                <rect id="XMLID_511_" x="120" y="120" width="10" height="10" />
-                <rect id="XMLID_512_" x="120" y="180" width="10" height="10" />
-                <rect id="XMLID_515_" x="120" y="240" width="10" height="10" />
-              </g>
+            <svg className={style['Dotted']} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 270" xmlSpace="preserve">
+              
             </svg>
-            <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <svg className={style['Circle']} width="45px" height="45px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
               <circle cx="16" cy="16" r="16" />
             </svg>
-            <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 270 270" xmlSpace="preserve">
+            <svg className={style['Dotted']} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 270" xmlSpace="preserve">
               <g id="XMLID_508_">
-                <rect id="XMLID_509_" x="120" width="10" height="10" />
-                <rect id="XMLID_510_" x="120" y="60" width="10" height="10" />
-                <rect id="XMLID_511_" x="120" y="120" width="10" height="10" />
-                <rect id="XMLID_512_" x="120" y="180" width="10" height="10" />
-                <rect id="XMLID_515_" x="120" y="240" width="10" height="10" />
+                <circle cx="120" cy="25" r="16" />
+                <circle cx="120" cy="102" r="16" />
+                <circle cx="120" cy="176" r="16" />
+                <circle cx="120" cy="250" r="16" />
               </g>
             </svg>
-            <svg fill="#000000" width="45px" height="45px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <svg className={style['Circle']} width="30px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
               <circle cx="16" cy="16" r="16" />
             </svg>
-            <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 270 270" xmlSpace="preserve">
+            <svg className={style['Dotted']} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 270" xmlSpace="preserve">
               <g id="XMLID_508_">
-                <rect id="XMLID_509_" x="120" width="10" height="10" />
-                <rect id="XMLID_510_" x="120" y="60" width="10" height="10" />
-                <rect id="XMLID_511_" x="120" y="120" width="10" height="10" />
-                <rect id="XMLID_512_" x="120" y="180" width="10" height="10" />
-                <rect id="XMLID_515_" x="120" y="240" width="10" height="10" />
+                <circle cx="120" cy="25" r="16" />
+                <circle cx="120" cy="102" r="16" />
+                <circle cx="120" cy="176" r="16" />
+                <circle cx="120" cy="250" r="16" />
               </g>
             </svg>
-            <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="16" r="16" />
-            </svg>
-            <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 270 270" xmlSpace="preserve">
-              <g id="XMLID_508_">
-                <rect id="XMLID_509_" x="120" width="10" height="10" />
-                <rect id="XMLID_510_" x="120" y="60" width="10" height="10" />
-                <rect id="XMLID_511_" x="120" y="120" width="10" height="10" />
-                <rect id="XMLID_512_" x="120" y="180" width="10" height="10" />
-                <rect id="XMLID_515_" x="120" y="240" width="10" height="10" />
-              </g>
-            </svg>
-            <svg fill="#000000" width="40px" height="40px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <svg className={style['Circle']} width="40px" height="40px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
               <circle cx="16" cy="16" r="16" />
             </svg>
 
