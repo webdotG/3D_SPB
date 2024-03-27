@@ -38,7 +38,7 @@ export default function Cost() {
         По этому сегодня мы выполняем проекты быстрее и дешевле, чем крупные компании.
       </p>
 
-      <ul className={style['cost-list-btn']}>
+      {/* <ul className={style['cost-list-btn']}>
         <li className={style['cost-item-btn']}>
           <button>
             
@@ -54,7 +54,7 @@ export default function Cost() {
             
           </button>
         </li>
-      </ul>
+      </ul> */}
 
       <ul className={style['cost-list']}>
         <li className={style['cost-item']}>
