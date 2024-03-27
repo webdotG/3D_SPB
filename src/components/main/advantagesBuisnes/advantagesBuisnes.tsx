@@ -3,8 +3,8 @@ import style from '../advantagesClient/advantages.module.scss'
 
 export default function AdvantagesBuisnes() {
   return (
-    <section className={style['advantages-wrapper']}>
-    <h2 className={style['advantages-title']}>Преимущества для вашей компании</h2>
+    <section className={style['advantages-wrapper-busines']}>
+    <h2 className={style['advantages-title-busines']}>Преимущества для вашей компании</h2>
     <ul className={style['advantages-list']}>
       <li className={style['advantages-item']}>
         <h4>

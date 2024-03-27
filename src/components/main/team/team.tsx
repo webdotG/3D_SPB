@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import style from './team.module.scss';
+import splitString from '../../../utils/stringSplit'
 import Kirill from '../../../SVG/sponsors/logo-reddit-svgrepo-com.svg';
 import Sergei from '../../../SVG/sponsors/logo-steam-svgrepo-com.svg';
 import Yra from '../../../SVG/sponsors/logo-tux-svgrepo-com.svg';
@@ -41,11 +42,14 @@ const cards = [
   },
 ];
 
+const title = 'Команда'
+
 export default function Team() {
   const [currentSlide, setCurrentSlide] = useState(-1);
   const [isFlipped, setIsFlipped] = useState(Array(cards.length).fill(false));
   const [isActive, setIsActive] = useState(Array(cards.length).fill(false));
   const [isAnimated, setIsAnimated] = useState(false);
+
 
   useEffect(() => {
     setIsFlipped(Array(cards.length).fill(false));
@@ -75,8 +79,29 @@ export default function Team() {
     console.log(`Выбран слайд с индексом ${index}`);
   };
 
+  const titleChars = splitString(title);
+
+  const charVariants = {
+    hidden: { opacity: 0 },
+    reveal: { opacity: 1 },
+  }
+
   return (
     <section className={style['team-wrapper']}>
+       <motion.h2
+        initial='hidden'
+        whileInView='reveal'
+        transition={{ staggerChildren: 0.1 }}
+      >{titleChars.map(char => (
+        <motion.span
+          key={char}
+          transition={{ duration: 0.5 }}
+          variants={charVariants}
+        >
+          {char}
+        </motion.span>
+      ))}</motion.h2>
+
       <div className={style['slider']}>
 
         <div className={style['cards']}>
@@ -99,9 +124,9 @@ export default function Team() {
                   style={{ position: 'absolute' }}
                 >
                   <div className={style['flip-card-front']}>
-                    <h2 className={style['front-title']}>
+                    <h3 className={style['front-title']}>
                       {card.name}
-                      </h2>
+                      </h3>
                     <img
                       src={card.gif}
                       alt="GIF"
@@ -117,7 +142,7 @@ export default function Team() {
                         <img src={card.imgSrc} alt={card.name} />
                       </div>
                       <div className={style['content']}>
-                        <h2>{card.name}</h2>
+                        <h3>{card.name}</h3>
                         <h4>{card.position}</h4>
                         <p>{card.description}</p>
                       </div>
@@ -134,20 +159,6 @@ export default function Team() {
             );
           })}
         </div>
-
-        {cards.map((_, index) => (
-          <input
-            key={index}
-            type='radio'
-            name='card'
-            id={`c-${index + 1}`}
-            checked={index === currentSlide}
-            onChange={() => {
-              handleSlideChange(index);
-              handleFlip(index);
-            }}
-          />
-        ))}
 
       </div>
     </section>

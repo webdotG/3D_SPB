@@ -52,16 +52,17 @@ export default function Technology() {
       <motion.h2
         initial='hidden'
         whileInView='reveal'
-        transition={{staggerChildren: 0.1}}
-      >{titleChars.map( char => (
+        transition={{ staggerChildren: 0.1 }}
+      >{titleChars.map(char => (
         <motion.span
           key={char}
-          transition={{duration: 0.5}}
+          transition={{ duration: 0.5 }}
           variants={charVariants}
         >
           {char}
-          </motion.span>
-      ))}</motion.h2>
+        </motion.span>
+      ))}
+      </motion.h2>
       {
         projects.map((project, i) => {
           const targetScale = 1 - ((projects.length - i) * 0.05);
