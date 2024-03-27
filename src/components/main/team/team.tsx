@@ -46,6 +46,7 @@ const title = 'Команда'
 
 export default function Team() {
   const [currentSlide, setCurrentSlide] = useState(-1);
+  console.log(setCurrentSlide)
   const [isFlipped, setIsFlipped] = useState(Array(cards.length).fill(false));
   const [isActive, setIsActive] = useState(Array(cards.length).fill(false));
   const [isAnimated, setIsAnimated] = useState(false);
@@ -74,10 +75,10 @@ export default function Team() {
     }
   };
 
-  const handleSlideChange = (index: number) => {
-    setCurrentSlide(index);
-    console.log(`Выбран слайд с индексом ${index}`);
-  };
+  // const handleSlideChange = (index: number) => {
+  //   setCurrentSlide(index);
+  //   console.log(`Выбран слайд с индексом ${index}`);
+  // };
 
   const titleChars = splitString(title);
 
