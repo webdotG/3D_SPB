@@ -1,8 +1,8 @@
 .main-title {
   width: 100vw;
+  height: 100vh;
   padding-top: 100px;
   position: relative;
-  height: 100vh;
 
   .scroll-down{
     position: absolute;
@@ -47,10 +47,9 @@
     // justify-content: end;
 
     .main-title__link {
-      display: block;
+      width: 300px;
       margin-right: 100px;
       padding: 12px 15px;
-      width: 300px;
       display: flex;
       align-items: center;
       justify-content: space-between;
