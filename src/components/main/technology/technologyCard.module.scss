@@ -7,6 +7,7 @@
   top: 0px;
   color: white;
   z-index: 10;
+ 
 
   h2 {
     letter-spacing: 1px;
@@ -23,6 +24,7 @@
     // border-radius: 42px;
     transform-origin: top;
     overflow: hidden;
+    background-color: rgba(102, 103, 171, 1);
 
     h2 {
       text-align: left;

@@ -8,7 +8,7 @@ interface TechnologyCardProps {
   description: string;
   descriptionTwo: string;
   src: string;
-  color: string;
+  // color: string;
   progress: number | undefined;
   range: [number, number];
   targetScale: number;
@@ -22,7 +22,7 @@ const TechnologyCard: React.FC<TechnologyCardProps> = ({
   description,
   descriptionTwo,
   src,
-  color,
+  // color,
   progress,
   range,
   targetScale,
@@ -42,7 +42,7 @@ const TechnologyCard: React.FC<TechnologyCardProps> = ({
   return (
     <div ref={container} className={styles.cardContainer}>
       <motion.div
-        style={{ backgroundColor: color, scale, top: `calc(21px + ${i * 0}px)` }}
+        style={{ scale, top: `calc(32px + ${i * 0}px)` }} //backgroundColor:color,
         className={styles.card}
       >
         <h2>{title}</h2>
