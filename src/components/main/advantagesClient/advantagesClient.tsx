@@ -49,13 +49,11 @@ export default function AdvantagesClient() {
       <div className={style['buttons-container']}>
         <button onClick={showBusiness}
         className={`${style['button-business']} ${showBusinessAdvantages ? style['button-active'] : ''}`}
-          // className={style['button-business']}
         >
           Для вашего бизнеса
         </button>
         <button onClick={showClients}
         className={`${style['button-clients']} ${showClientAdvantages ? style['button-active'] : ''}`}
-          // className={style['button-clients']}
         >
           Для ваших клиентов
         </button>
@@ -63,55 +61,54 @@ export default function AdvantagesClient() {
 
       <section
         className={`${style['advantages-clients']} ${showClientAdvantages ? '' : style['display-none']}`}
-      // className={style['advantages-client']}
       >
         <ul className={style['advantages-list']}>
+        <li className={style['advantages-item']}>
+            <h4>
+              3D макет в Подарок
+            </h4>
+            <p>
+              Каждый клиент получает в подарок 3D макет обьекта, в котором можно сделать дизайн проект.
+            </p>
+          </li>
           <li className={style['advantages-item']}>
             <h4>
               Лучшее понимание проекта:
             </h4>
             <p>
-              Потенциальные покупатели могут более детально изучить проект, рассмотрев все детали и особенности будущего дома и его окружения, включая виды из окон и планировки.
+              Можно более детально рассмотреть обьект и особенности его окружения, включая виды из окон и планировки.
             </p>
           </li>
           <li className={style['advantages-item']}>
             <h4>
-              Возможность принятия более обоснованных решений:
+              Принятие решений:
             </h4>
             <p>
-              Благодаря 3D макету, покупатели могут лучше понять, как будет выглядеть их будущее жилье, что помогает принимать обоснованные решения при выборе недвижимости.
+              3D модель помогает детально понять, как будет выглядеть обьект в будущем. 
             </p>
           </li>
           <li className={style['advantages-item']}>
             <h4>
-              Экономия времени и удобство:
+              Время и удобство:
             </h4>
             <p>
-              Виртуальные туры позволяют покупателям осмотреть недвижимость в любое удобное время, не тратя время на поездки к объекту недвижимости.
+              Виртуальные туры позволяют осмотреть недвижимость в любое удобное время, не тратя время на поездки.
             </p>
           </li>
           <li className={style['advantages-item']}>
             <h4>
-              Возможность настройки:
+              Фильтры и  настройки:
             </h4>
             <p>
-              Покупатели могут использовать 3D макет для настройки интерьера, выбирая цвета, отделку и мебель, что помогает им представить себя живущими в новом доме.
+              Динамическая настройка интерьера, цвета, отделки и мебели, позволяет почувствовать себя в новом доме.
             </p>
           </li>
           <li className={style['advantages-item']}>
             <h4>
-              Уменьшение риска ошибок и недоразумений
+              Уменьшение риска ошибок
             </h4>
             <p>
-              Благодаря детальной визуализации, потенциальные покупатели могут лучше понять проект и избежать недоразумений или ошибок при выборе и покупке недвижимости
-            </p>
-          </li>
-          <li className={style['advantages-item']}>
-            <h4>
-              3D макет квартиры в Подарок
-            </h4>
-            <p>
-              Каждый покупатель получает в подарок 3D макет, благодаря которому может сделать себе дизайн проект.
+              Детальная визуализации помошает избежать недоразумений или ошибок при выборе и покупке недвижимости
             </p>
           </li>
         </ul>
@@ -119,7 +116,6 @@ export default function AdvantagesClient() {
 
       <section
         className={`${style['advantages-business']} ${showBusinessAdvantages ? '' : style['display-none']}`}
-      // className={style['advantages-busines']}
       >
         <ul className={style['advantages-list']}>
           <li className={style['advantages-item']}>
