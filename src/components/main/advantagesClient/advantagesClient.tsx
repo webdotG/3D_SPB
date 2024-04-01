@@ -14,7 +14,7 @@ export default function AdvantagesClient() {
     reveal: { opacity: 1 },
   }
 
-  const [showBusinessAdvantages, setShowBusinessAdvantages] = useState(false);
+  const [showBusinessAdvantages, setShowBusinessAdvantages] = useState(true);
   const [showClientAdvantages, setShowClientAdvantages] = useState(false);
 
   const showBusiness = () => {
