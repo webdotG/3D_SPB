@@ -5,7 +5,7 @@ import Footer from './components/footer/footer';
 import MainTitle from './components/main/mainTitle/mainTitle'
 import Technology from './components/main/technology/technology'
 import { BrowserRouter } from 'react-router-dom'
-import Skills from './components/main/skills/skills';
+// import Skills from './components/main/skills/skills';
 import AdvantagesClient from './components/main/advantagesClient/advantagesClient';
 import AdvantagesBuisnes from './components/main/advantagesBuisnes/advantagesBuisnes';
 import Stages from './components/main/stages/stages';
