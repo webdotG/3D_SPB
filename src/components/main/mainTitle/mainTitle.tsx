@@ -33,7 +33,8 @@ export default function MainTitle() {
       </video>
       <div className={style['main-title__text']}>
         <h1 className={style['main-title__title']}>3D визуализация <br />
-          обьектов недвижимости
+          обьектов<br/>
+          недвижимости
         </h1>
         <p className={style['main-title__paragraph']}>готовое маркетинговое решение<br />
           для вашего бизнеса</p>
