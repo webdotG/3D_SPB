@@ -1,32 +1,66 @@
-.advantages-wrapper-client,
-.advantages-wrapper-busines{
- width: 1100px;
+.advantages-client,
+.advantages-busines{
+ width: 100vw;
  margin: 0 auto;
 }
 
+.display-none{
+  display: none;
+}
 
-.advantages-wrapper-busines{
+.advantages-title {
+  padding: 0;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 66px;
+  font-weight: 200;
+  text-align: center;
+
+  h2{
+    padding: 0;
+  }
+}
+
+.buttons-container{
+  padding-top: 50px;
   padding-bottom: 50px;
-}
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 
-.advantages-title-client {
-  margin-top: 75px;
-  font-size: 66px;
-  font-weight: 200;
-  text-align: center;
-}
+  button {
+    width: 350px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 300;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 6px;
+    cursor: pointer;
 
+    &:hover{
+      border: 2px solid white;
+      background-color: rgba(0,0,0, 0.3);
+      color: #f5f5f5;
+    }
+  }
 
-.advantages-title-busines {
-  margin-top: 35px;
-  font-size: 66px;
-  font-weight: 200;
-  text-align: center;
+  .button-active{
+    border: 2px solid white;
+      background-color: rgba(0,0,0, 0.3);
+      color: #f5f5f5;
+  }
 }
 
 
 .advantages-list {
   max-width: 1100px;
+  padding-bottom: 50px;
   margin: 0 auto;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
