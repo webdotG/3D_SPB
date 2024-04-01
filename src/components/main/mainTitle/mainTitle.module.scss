@@ -2,14 +2,14 @@
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  min-height: 100vw;
+  min-height: 100vh;
   padding-top: 100px;
   position: relative;
 
   .scroll-down{
     position: absolute;
-    right: 150px;
-    bottom: 50px;
+    right: 45%;
+    bottom: 25px;
   }
 
   video {
@@ -23,7 +23,7 @@
   }
 
   .main-title__text {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-left: 50px;
     position: relative;
     z-index: 1;

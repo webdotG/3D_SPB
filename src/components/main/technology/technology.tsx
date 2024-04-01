@@ -7,27 +7,43 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: "UnrealEngine",
-    description: "Unreal Engine - это ведущий игровой движок, который позволяет создавать высококачественные виртуальные миры. Благодаря своей производительности он признан лучшим инструментом для разработки.",
-    src: "/unrealEngine.png",
-    link: "https://www.unrealengine.com/en-US",
-    color: "black"
+    title: 'Обзор объектов инфраструктуры',
+    description: 'какое то описание',
+    src: "",
+    color: "tomato"
 
   },
   {
-    title: "Autodesk",
-    description: "Autodesk - мировой лидер в области программ для проектирования и инженерии. Используя AutoCAD и 3Ds Max, мы создаём архитектуры и медиа для промышленного производства.",
-    src: "/3DAutodesk.svg",
-    link: "https://www.autodesk.com/",
+    title: '3D тур по квартире',
+    description: 'какое то описание',
+    src: "",
+    color: "white"
+  },
+  {
+    title: '2D и 3D планировки',
+    description: 'какое то описание',
+    src: "",
     color: "black"
   },
   {
-    title: "RizomUV",
-    description: "RizomUV - это мощный инструмент для UV-развертки и текстурирования 3D-моделей. Он служит нам для создания текстур, анимаций и визуальных эффектов.",
-    src: "/RizomUV.png",
-    link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
+    title: 'Наличие свободных или купленных квартир',
+    description: 'какое то описание',
+    src: "",
+    color: "tomato"
+  },
+  {
+    title: 'Фильтрация по параметрам',
+    description: 'какое то описание',
+    src: "",
+    color: "white"
+  },
+  {
+    title: 'Онлайн бронирование',
+    description: 'какое то описание',
+    src: "",
     color: "black"
   },
+  
 ]
 
 const title = 'Технологии'
@@ -65,7 +81,7 @@ export default function Technology() {
       </motion.h2>
       {
         projects.map((project, i) => {
-          const targetScale = 1 - ((projects.length - i) * 0.05);
+          const targetScale = 1 - ((projects.length - i) * 0.1);
           return <TechnologyCard
             key={`p_${i}`}
             i={i}

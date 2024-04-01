@@ -1,6 +1,6 @@
 .header {
-  width: 100%;
-  min-height: 60px;
+  width: 100vw;
+  min-height: 50px;
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
@@ -13,8 +13,8 @@
 
   .logo-link {
     margin-left: 20px;
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +54,7 @@
 
     .nav-link {
       padding: 5px;
-      font-size: 25px;
+      font-size: 21px;
       text-transform: uppercase;
       font-weight: 300;
       color: var(--color-white);
