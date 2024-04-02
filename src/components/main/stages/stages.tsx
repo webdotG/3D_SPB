@@ -1,10 +1,17 @@
 import style from './stages.module.scss'
-// import House from '../../../../public/house.jpg'
-
 import { motion } from 'framer-motion';
+import splitString from '../../../utils/stringSplit';
+
+
+const title = 'Взамодействие';
 
 export default function Stages() {
+  const titleChars = splitString(title);
 
+  const charVariants = {
+    hidden: { opacity: 0 },
+    reveal: { opacity: 1 },
+  };
 
   const variants = {
     hidden: { opacity: 0 },
@@ -14,13 +21,21 @@ export default function Stages() {
 
   return (
     <section className={style['stages']}>
-      <h2>Этапы взаимодействия</h2>
+      
+      <motion.h2 initial='hidden' whileInView='reveal' transition={{ staggerChildren: 0.1 }}>
+        {titleChars.map((char, index) => (
+          <motion.span key={index} transition={{ duration: 0.5 }} variants={charVariants}>
+            {char}
+          </motion.span>
+        ))}
+      </motion.h2>
+
       <div className={style['stages-content']}>
 
         <ul className={style['stages-list']}>
           <li className={style['stages-item']}>
             <p>
-              Наш менеджер продукта связывается с Вами и подробно обсуждает будущий проект, помогает составить ТЗ и выбрать нужную конфигурацию.
+              Мы свяжемся с вами и поможем составить подробное ТЗ
             </p>
           </li>
           <li className={style['stages-item']}>
@@ -30,17 +45,17 @@ export default function Stages() {
           </li>
           <li className={style['stages-item']}>
             <p>
-              После окончательной оценки проекта мы высылаем вам договор на подписание, где указаны ключевые показатели проекта.
+              После оценки мы высылаем договор, с ключевыми показателями проекта.
             </p>
           </li>
           <li className={style['stages-item']}>
             <p>
-              На некоторых предварительных этапах будет проводиться согласование с заказчиком
+              На оговоренных этапах проводятся согласования и правки
             </p>
           </li>
           <li className={style['stages-item']}>
             <p>
-              Вы получаете готовый продукт с изменениями после правок
+              Вы получаете готовый продукт и закрываем сделку
             </p>
           </li>
         </ul>

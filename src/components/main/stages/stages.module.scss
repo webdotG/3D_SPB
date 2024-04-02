@@ -5,11 +5,13 @@
   margin: 0 auto;
 
   h2 {
-    padding-top: 20px;
-    padding-bottom: 40px;
-    font-size: 53px;
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 66px;
     font-weight: 200;
     text-align: center;
+   
   }
 
 
@@ -22,12 +24,23 @@
 
     .stages-list {
       width: 350px;
-      min-height: 500px;
+      min-height: 550px;
+      padding-bottom: 50px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
       text-align: center;
+
+      .stages-item{
+        p{
+          font-size: 21px;
+          line-height: 25px;
+          letter-spacing: 0.1px;
+          text-align: left;
+        }
+        
+      }
     }
 
 
