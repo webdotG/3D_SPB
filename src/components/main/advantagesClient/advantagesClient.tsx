@@ -1,10 +1,69 @@
-import style from '../advantagesClient/advantages.module.scss'
+import style from '../advantagesClient/advantages.module.scss';
 import splitString from '../../../utils/stringSplit';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
+enum AdvantagesType {
+  Business = 'Business',
+  Client = 'Client',
+}
 
-const title = 'Преимущества'
+const advantagesData = {
+  Business: [
+    {
+      title: 'Повышает уровень доверия',
+      description: 'Высококачественный 3D макет внушает доверие у будущих владельцев и говорит о профессионализме застройщика.',
+    },
+    {
+      title: 'Клиенты на раннем этапе',
+      description: 'Визуализация и Туры привлекают внимание покупателей и помогают в продаже еще до завершения строительства.',
+    },
+    {
+      title: 'Коммуникация с клиентами',
+      description: 'Новые технологии всегда позволяют выделиться на рынке и привлечь больше внимания.',
+    },
+    {
+      title: 'Конкурентоспособность',
+      description: 'Высококачественный 3D макет внушает доверие у будущих владельцев и говорит о профессионализме застройщика.',
+    },
+    {
+      title: 'Улучшение маркетинга',
+      description: '3D визуализация позволяет вам максимально эффективно продвигать свои проекты, привлекая покупателей.',
+    },
+    {
+      title: 'Сколько угодно контента',
+      description: 'Вы неограниченны в количестве фото и видео вашего объекта.',
+    },
+  ],
+  Client: [
+    {
+      title: 'Лучшее понимание проекта',
+      description: 'Детальная прорисовка объекта и его окружения: расположение солнца, виды из окон, планировка.',
+    },
+    {
+      title: 'Фильтры и настройки',
+      description: 'Динамическая настройка интерьера, цвета, отделки и мебели, позволяет почувствовать себя в новом доме.',
+    },
+    {
+      title: 'Принятие решений',
+      description: '3D модель помогает точно понять, как будет выглядеть объект в будущем. Проверенно повышает конверсию.',
+    },
+    {
+      title: '3D макет в Подарок',
+      description: 'Каждый клиент получает в подарок 3D макет объекта, в котором можно сделать дизайн проект.',
+    },
+    {
+      title: 'Время и удобство',
+      description: 'Виртуальные туры позволяют осмотреть недвижимость в любое удобное время.',
+    },
+    {
+      title: 'Уменьшение ошибок',
+      description: 'Детальная визуализация помогает избежать недоразумений при выборе недвижимости.',
+    },
+  ],
+};
+
+const title = 'Преимущества';
 
 export default function AdvantagesClient() {
   const titleChars = splitString(title);
@@ -12,164 +71,55 @@ export default function AdvantagesClient() {
   const charVariants = {
     hidden: { opacity: 0 },
     reveal: { opacity: 1 },
-  }
-
-  const [showBusinessAdvantages, setShowBusinessAdvantages] = useState(true);
-  const [showClientAdvantages, setShowClientAdvantages] = useState(false);
-
-  const showBusiness = () => {
-    setShowBusinessAdvantages(true);
-    setShowClientAdvantages(false);
   };
 
-  const showClients = () => {
-    setShowClientAdvantages(true);
-    setShowBusinessAdvantages(false);
-  };
+  const [advantagesType, setAdvantagesType] = useState<AdvantagesType>(AdvantagesType.Business);
 
+  const handleAdvantagesToggle = (type: AdvantagesType) => {
+    setAdvantagesType(type);
+  };
 
   return (
-
     <section className={style['advantages-title']}>
-      <motion.h2
-        initial='hidden'
-        whileInView='reveal'
-        transition={{ staggerChildren: 0.1 }}
-      >{titleChars.map(char => (
-        <motion.span
-          key={char}
-          transition={{ duration: 0.5 }}
-          variants={charVariants}
-        >
-          {char}
-        </motion.span>
-      ))}
+      <motion.h2 initial='hidden' whileInView='reveal' transition={{ staggerChildren: 0.1 }}>
+        {titleChars.map((char, index) => (
+          <motion.span key={index} transition={{ duration: 0.5 }} variants={charVariants}>
+            {char}
+          </motion.span>
+        ))}
       </motion.h2>
 
       <div className={style['buttons-container']}>
-        <button onClick={showBusiness}
-          className={`${style['button-business']} ${showBusinessAdvantages ? style['button-active'] : ''}`}
+        <button
+          onClick={() => handleAdvantagesToggle(AdvantagesType.Business)}
+          className={`${advantagesType === AdvantagesType.Business ? style['button-active'] : ''}`}
         >
           Для вашего бизнеса
         </button>
-        <button onClick={showClients}
-          className={`${style['button-clients']} ${showClientAdvantages ? style['button-active'] : ''}`}
+        <button
+          onClick={() => handleAdvantagesToggle(AdvantagesType.Client)}
+          className={`${advantagesType === AdvantagesType.Client ? style['button-active'] : ''}`}
         >
           Для ваших клиентов
         </button>
       </div>
 
-      <section
-        className={`${style['advantages-clients']} ${showClientAdvantages ? '' : style['display-none']}`}
-      >
-        <ul className={style['advantages-list']}>
-        <li className={style['advantages-item']}>
-            <h4>
-              Лучшее понимание проекта
-            </h4>
-            <p>
-              Детальная прорисовка обьекта и его окружения:<br/> расположение солнца, виды из окон, планировка.
-            </p>
-          </li>
-          <li className={style['advantages-item']}>
-            <h4>
-              Фильтры и  настройки
-            </h4>
-            <p>
-              Динамическая настройка интерьера, цвета, отделки и мебели, позволяет почувствовать себя в новом доме.
-            </p>
-          </li>
-          <li className={style['advantages-item']}>
-            <h4>
-              Принятие решений
-            </h4>
-            <p>
-              3D модель помогает точно понять, как будет выглядеть обьект в будущем.<br/> И провернно повышает конверсию.
-            </p>
-          </li>
-          <li className={style['advantages-item']}>
-            <h4>
-              3D макет в Подарок
-            </h4>
-            <p>
-              Каждый клиент получает в подарок 3D макет обьекта, в котором можно сделать дизайн проект.
-            </p>
-          </li>
-          <li className={style['advantages-item']}>
-            <h4>
-              Время и удобство:
-            </h4>
-            <p>
-              Виртуальные туры позволяют осмотреть недвижимость в любое удобное время.
-            </p>
-          </li>
-          <li className={style['advantages-item']}>
-            <h4>
-              Уменьшение ошибок
-            </h4>
-            <p>
-              Детальная визуализация помогает избежать недоразумений при выборе недвижимости
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section
-        className={`${style['advantages-business']} ${showBusinessAdvantages ? '' : style['display-none']}`}
-      >
-        <ul className={style['advantages-list']}>
-          <li className={style['advantages-item']}>
-            <h4>
-              Повышает уровень доверия
-            </h4>
-            <p>
-              Высококачественный 3D макет внушает доверие у будущих владельцев и говорит о профессионализме застройщика.
-            </p>
-          </li>
-          <li className={style['advantages-item']}>
-            <h4>
-              Клиенты на раннем этапе
-            </h4>
-            <p>
-              Визуализация и Туры привлекают внимание покупателей и помогают в продаже еще до завершения строительства.
-            </p>
-          </li>
-          <li className={style['advantages-item']}>
-            <h4>
-              Коммуникация с клиентами
-            </h4>
-            <p>
-              Наши технологии упрощают коммуникацию с клиентами и помогают быстрее согласовывать их требования.
-            </p>
-          </li>
-          <li className={style['advantages-item']}>
-            <h4>
-              Конкурентоспособность
-            </h4>
-            <p>
-              Новые технологии всегда позволяют выделиться на рынке и привлечь больше внимания.
-            </p>
-          </li>
-          <li className={style['advantages-item']}>
-            <h4>
-              Улучшение маркетинга
-            </h4>
-            <p>
-              3D визуализация позволяет вам максимально эффективно продвигать свои проекты, привлекая покупателей.
-            </p>
-          </li>
-          <li className={style['advantages-item']}>
-            <h4>
-              Сколько угодно контента
-            </h4>
-            <p>
-              Вы неограниченны в колличестве фото и видео вашего объекта.
-            </p>
-          </li>
-
-        </ul>
-      </section>
-
+      <motion.ul className={style['advantages-list']} initial='hidden' animate='reveal'>
+        {advantagesData[advantagesType].map((advantage, index) => (
+          <motion.li
+            className={style['advantages-item']}
+            key={`${advantagesType}-${index}`}
+            variants={{
+              hidden: { opacity: 0, },
+              reveal: { opacity: 1, },
+            }}
+            transition={{ duration: 1, delay: 0.12 * index }}
+          >
+            <h4>{advantage.title}</h4>
+            <p>{advantage.description}</p>
+          </motion.li>
+        ))}
+      </motion.ul>
     </section>
-  )
+  );
 }
